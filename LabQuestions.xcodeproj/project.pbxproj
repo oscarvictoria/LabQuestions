@@ -21,6 +21,8 @@
 		5768048823A1CEC800571F2F /* QuestionDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5768048723A1CEC800571F2F /* QuestionDetailController.swift */; };
 		5768048A23A1CF8300571F2F /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5768048923A1CF8300571F2F /* UIImageView+Extensions.swift */; };
 		576D0E5D23A1B2B2002D6E16 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576D0E5C23A1B2B2002D6E16 /* String+Extensions.swift */; };
+		BE05368C23A7EB550026150E /* AnswerQuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE05368B23A7EB550026150E /* AnswerQuestionController.swift */; };
+		BE05368E23A7EE0E0026150E /* PostedAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE05368D23A7EE0E0026150E /* PostedAnswer.swift */; };
 		BEC69B6323A2AE700001C5A2 /* LabQuestionsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC69B6223A2AE700001C5A2 /* LabQuestionsAPIClient.swift */; };
 		BEC69B6523A2AF0E0001C5A2 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC69B6423A2AF0E0001C5A2 /* Question.swift */; };
 		BEC69B6923A3E5790001C5A2 /* PostedQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC69B6823A3E5790001C5A2 /* PostedQuestion.swift */; };
@@ -55,6 +57,8 @@
 		5768048723A1CEC800571F2F /* QuestionDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailController.swift; sourceTree = "<group>"; };
 		5768048923A1CF8300571F2F /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		576D0E5C23A1B2B2002D6E16 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		BE05368B23A7EB550026150E /* AnswerQuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerQuestionController.swift; sourceTree = "<group>"; };
+		BE05368D23A7EE0E0026150E /* PostedAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostedAnswer.swift; sourceTree = "<group>"; };
 		BEC69B6223A2AE700001C5A2 /* LabQuestionsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabQuestionsAPIClient.swift; sourceTree = "<group>"; };
 		BEC69B6423A2AF0E0001C5A2 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		BEC69B6823A3E5790001C5A2 /* PostedQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostedQuestion.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 				573109B023A08C1000635ECE /* LabQuestionsController.swift */,
 				5768048523A1C40100571F2F /* CreateQuestionController.swift */,
 				5768048723A1CEC800571F2F /* QuestionDetailController.swift */,
+				BE05368B23A7EB550026150E /* AnswerQuestionController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 			children = (
 				BEC69B6423A2AF0E0001C5A2 /* Question.swift */,
 				BEC69B6823A3E5790001C5A2 /* PostedQuestion.swift */,
+				BE05368D23A7EE0E0026150E /* PostedAnswer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -275,10 +281,12 @@
 				573109B123A08C1000635ECE /* LabQuestionsController.swift in Sources */,
 				5768048623A1C40100571F2F /* CreateQuestionController.swift in Sources */,
 				573109D123A08CBB00635ECE /* NetworkHelper.swift in Sources */,
+				BE05368E23A7EE0E0026150E /* PostedAnswer.swift in Sources */,
 				576D0E5D23A1B2B2002D6E16 /* String+Extensions.swift in Sources */,
 				5768048A23A1CF8300571F2F /* UIImageView+Extensions.swift in Sources */,
 				573109AD23A08C1000635ECE /* AppDelegate.swift in Sources */,
 				BEC69B6323A2AE700001C5A2 /* LabQuestionsAPIClient.swift in Sources */,
+				BE05368C23A7EB550026150E /* AnswerQuestionController.swift in Sources */,
 				5723DE3C23A2471000C0E768 /* UIViewController+Alerts.swift in Sources */,
 				BEC69B6523A2AF0E0001C5A2 /* Question.swift in Sources */,
 				5768048823A1CEC800571F2F /* QuestionDetailController.swift in Sources */,

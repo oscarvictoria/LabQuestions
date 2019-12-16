@@ -197,11 +197,75 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wWj-Yq-j6z"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="8Tc-PR-CSv"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="8Tc-PR-CSv">
+                        <barButtonItem key="rightBarButtonItem" title="Answer" id="CxB-dm-xSp">
+                            <connections>
+                                <segue destination="8Oo-D4-bHL" kind="presentation" id="G0z-H0-j2O"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="labNameLabel" destination="s62-mF-saH" id="BLS-eX-o33"/>
+                        <outlet property="questionTextView" destination="lMP-zi-HTi" id="vjy-ev-tFv"/>
+                        <outlet property="userImageView" destination="Ea4-Su-CpS" id="RPG-zp-dy3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NhQ-8a-nkA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1666.6666666666667" y="101.78571428571428"/>
+        </scene>
+        <!--Answer Question-->
+        <scene sceneID="bpy-w1-8Rb">
+            <objects>
+                <viewController id="Pzh-gs-Rem" customClass="AnswerQuestionController" customModule="LabQuestions" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FQD-DG-ble">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your answer below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDA-mY-g30">
+                                <rect key="frame" x="113" y="76" width="188" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DVu-f1-TaC">
+                                <rect key="frame" x="8" y="105" width="398" height="301"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BDA-mY-g30" firstAttribute="top" secondItem="9gd-7s-1HS" secondAttribute="top" constant="20" id="Dur-wc-ZbD"/>
+                            <constraint firstItem="DVu-f1-TaC" firstAttribute="top" secondItem="BDA-mY-g30" secondAttribute="bottom" constant="8" id="Fhj-Gf-gbX"/>
+                            <constraint firstItem="BDA-mY-g30" firstAttribute="centerX" secondItem="FQD-DG-ble" secondAttribute="centerX" id="apH-XJ-qrp"/>
+                            <constraint firstItem="DVu-f1-TaC" firstAttribute="leading" secondItem="9gd-7s-1HS" secondAttribute="leading" constant="8" id="koJ-kb-QNb"/>
+                            <constraint firstItem="DVu-f1-TaC" firstAttribute="height" secondItem="9gd-7s-1HS" secondAttribute="height" multiplier="0.4" id="wN6-J0-Rok"/>
+                            <constraint firstItem="9gd-7s-1HS" firstAttribute="trailing" secondItem="DVu-f1-TaC" secondAttribute="trailing" constant="8" id="waN-Ne-zgC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9gd-7s-1HS"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Answer Question" id="ssC-G7-KYd">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="SQc-jp-bw9">
+                            <connections>
+                                <action selector="cancel:" destination="Pzh-gs-Rem" id="aOW-Cg-lWN"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="wB4-La-ZjS">
+                            <connections>
+                                <action selector="post:" destination="Pzh-gs-Rem" id="btG-Fb-fIp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="answerTextView" destination="DVu-f1-TaC" id="JT6-HU-txz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ikE-sj-LTH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2555.072463768116" y="831.69642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dYR-jm-CCC">
@@ -239,6 +303,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INW-0U-PTs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="850.72463768115949" y="-581.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="La2-OJ-ZWs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Oo-D4-bHL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bG0-2j-GRp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Pzh-gs-Rem" kind="relationship" relationship="rootViewController" id="0iu-0X-yTO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="08d-83-AQd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1644.9275362318842" y="831.69642857142856"/>
         </scene>
     </scenes>
     <resources>

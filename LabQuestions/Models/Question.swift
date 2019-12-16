@@ -13,7 +13,7 @@ struct Question: Decodable {
     let name: String // random user name
     let avatar: String // random user avatar
     let createdAt: String // creating a date stamp
-    let title: String?
+    let title: String
     let description: String
     let labName: String
 }

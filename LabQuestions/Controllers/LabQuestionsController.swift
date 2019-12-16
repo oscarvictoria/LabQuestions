@@ -29,6 +29,18 @@ class LabQuestionsController: UIViewController {
         configuredRefreshControl()
     }
     
+ 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let questionDVC = segue.destination as? QuestionDetailController,
+            let indexPath = tableView.indexPathForSelectedRow else {
+                fatalError("error")
+        }
+        
+        let updatedQuestion = questions[indexPath.row]
+        questionDVC.question = updatedQuestion
+    }
+    
     func configuredRefreshControl() {
         refreshControl = UIRefreshControl()
         tableView.refreshControl = refreshControl
